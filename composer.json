@@ -1,31 +1,29 @@
 {
-"name": "izquierdogalan/benchmark-bundle",
-"type": "symfony-bundle",
-"description": "Show benchmark functions, apis, controlers, etc",
-"keywords": [
-"benchmark",
-"api",
-"monitorization"
-],
-"homepage": "https://github.com/izquierdogalan/BenchmarkBundle",
-"license": "MIT",
-"authors": [
-{
-"name": "Jonathan Izquierdo Galán",
-"email": "ja.izquierdo.galan@gmail.com"
-}
-],
-"require": {
-"php": ">=5.3.2",
-"jms/aop-bundle": "^1.0",
-"symfony/framework-bundle": ">=2.2.0,<3.0"
-},
-"require-dev": {},
-"suggest": {},
-"autoload": {
-"psr-0": {
-"Easys\\SimpleCacheBundle": ""
-}
-},
-"target-dir": "Easys/SimpleCacheBundle"
+  "name": "izquierdogalan/simplecache-bundle",
+  "type": "symfony-bundle",
+  "description": "Show benchmark functions, apis, controlers, etc",
+  "keywords": [
+    "cache"
+  ],
+  "homepage": "https://github.com/izquierdogalan/SimpleCacheBundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jonathan Izquierdo Galán",
+      "email": "ja.izquierdo.galan@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.2",
+    "jms/aop-bundle": "^1.0",
+    "symfony/framework-bundle": ">=2.2.0,<3.0"
+  },
+  "require-dev": {},
+  "suggest": {},
+  "autoload": {
+    "psr-0": {
+      "Easys\\SimpleCacheBundle": ""
+    }
+  },
+  "target-dir": "Easys/SimpleCacheBundle"
 }
