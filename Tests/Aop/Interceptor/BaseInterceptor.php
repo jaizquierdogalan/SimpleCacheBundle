@@ -2,7 +2,6 @@
 
 namespace Easys\SimpleCacheBundle\Tests\Aop\Interceptor;
 
-
 use CG\Proxy\MethodInvocation;
 use Doctrine\Common\Cache\ArrayCache;
 use Easys\SimpleCacheBundle\Aop\Interceptor\CacheInterceptor;
@@ -31,7 +30,6 @@ class BaseInterceptor extends \PHPUnit_Framework_TestCase
             'key_'
         )->getMock();
 
-
         $this->container = m::mock(Container::class);
         $this->container->shouldReceive('get')->once()->with('doctrine_cache.providers.default_easys_cache')
             ->andReturn($this->cache)
@@ -46,8 +44,6 @@ class BaseInterceptor extends \PHPUnit_Framework_TestCase
         );
 
         $this->methodInvocation = m::mock(MethodInvocation::class);
-        $this->methodInvocation->shouldReceive('proceed')->andReturn("data");
+        $this->methodInvocation->shouldReceive('proceed')->andReturn('data');
     }
-
-
 }

@@ -2,7 +2,6 @@
 
 namespace Easys\SimpleCacheBundle\Services;
 
-
 use CG\Proxy\MethodInvocation;
 use Easys\SimpleCacheBundle\Annotation\Cache;
 use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
@@ -12,13 +11,13 @@ class KeyGenerator
     /**
      * @param MethodInvocation $invocation
      * @param $annotation
+     *
      * @return string
      */
     public function generateKey(MethodInvocation $invocation, Cache $annotation)
     {
         $expressionLanguage = new ExpressionLanguage();
         if ($annotation->value) {
-
             $values = $this->generateValues($invocation);
             if (count($values) > 0) {
                 $values = $expressionLanguage->evaluate(
@@ -37,6 +36,7 @@ class KeyGenerator
 
     /**
      * @param MethodInvocation $invocation
+     *
      * @return array
      */
     protected function generateValues(MethodInvocation $invocation)
@@ -53,11 +53,11 @@ class KeyGenerator
 
     /**
      * @param MethodInvocation $invocation
+     *
      * @return string
      */
     protected function getPrefix(MethodInvocation $invocation)
     {
         return $invocation->reflection->class.'\\'.$invocation->reflection->name;
     }
-
 }

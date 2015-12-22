@@ -2,31 +2,27 @@
 
 namespace Easys\SimpleCacheBundle\Tests\Aop\Interceptor;
 
-
 use Easys\SimpleCacheBundle\Annotation\Cacheable;
 use Easys\SimpleCacheBundle\Aop\Interceptor\CacheInterceptor;
-use Mockery as m;
 
 /**
  * @codeCoverageIgnore
  */
 class CacheableTest extends BaseInterceptor
 {
-
     public function testGetCacheEntry()
     {
         $this->getReaderWithAnnotation();
 
         $this->cache->shouldReceive('contains')->once()->andReturn(true);
-        $this->cache->shouldReceive('fetch')->once()->andReturn(serialize("data"));
-
+        $this->cache->shouldReceive('fetch')->once()->andReturn(serialize('data'));
 
         $this->assertInstanceOf(CacheInterceptor::class, $this->interceptor);
-        $this->assertEquals("data", $this->interceptor->intercept($this->methodInvocation));
+        $this->assertEquals('data', $this->interceptor->intercept($this->methodInvocation));
     }
 
     /**
-     * Configure Reader with annotation
+     * Configure Reader with annotation.
      */
     protected function getReaderWithAnnotation()
     {
@@ -45,9 +41,7 @@ class CacheableTest extends BaseInterceptor
         $this->cache->shouldReceive('save')->once()->andReturn(true);
         $this->cache->shouldReceive('contains')->once()->andReturn(false);
 
-
         $this->assertInstanceOf(CacheInterceptor::class, $this->interceptor);
-        $this->assertEquals("data", $this->interceptor->intercept($this->methodInvocation));
+        $this->assertEquals('data', $this->interceptor->intercept($this->methodInvocation));
     }
-
 }

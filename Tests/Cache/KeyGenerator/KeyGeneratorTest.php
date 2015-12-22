@@ -7,7 +7,6 @@ use Easys\SimpleCacheBundle\Annotation\Cacheable;
 use Easys\SimpleCacheBundle\Services\KeyGenerator;
 use Mockery as m;
 
-
 class KeyGeneratorTest extends \PHPUnit_Framework_TestCase
 {
     public function testGenerateKeyWithValue()
@@ -21,8 +20,6 @@ class KeyGeneratorTest extends \PHPUnit_Framework_TestCase
             '2b0d4a635341842df17f9a8bb52f365a',
             $keyGenerator->generateKey($method, new Cacheable(['value' => 'value', 'key' => 'key']))
         );
-
-
     }
 
     public function testGenerateKeyWithOutValue()
@@ -36,12 +33,10 @@ class KeyGeneratorTest extends \PHPUnit_Framework_TestCase
             '9cdaea360f6833551c37ee373fe8996a',
             $keyGenerator->generateKey($method, new Cacheable(['value' => '', 'key' => 'key']))
         );
-
-
     }
 
     /**
-     * Configure Reader with annotation
+     * Configure Reader with annotation.
      */
     protected function getReaderWithAnnotation()
     {

@@ -2,23 +2,19 @@
 
 namespace Easys\SimpleCacheBundle\Tests\Aop\Interceptor;
 
-
 use CG\Proxy\MethodInvocation;
 use Easys\SimpleCacheBundle\Annotation\CacheEvict;
 use Easys\SimpleCacheBundle\Aop\Interceptor\CacheInterceptor;
-use Mockery as m;
 
 /**
  * @codeCoverageIgnore
  */
 class CacheEvictTest extends BaseInterceptor
 {
-
-
     public function testCleanCacheSpecificEntry()
     {
         $this->cache->shouldReceive('delete')->once()->andReturn(true);
-        $this->getReaderWithAnnotation("false");
+        $this->getReaderWithAnnotation('false');
         $this->checkInterceptor();
     }
 
@@ -43,8 +39,7 @@ class CacheEvictTest extends BaseInterceptor
     public function testCleanCacheAllEntry()
     {
         $this->cache->shouldReceive('flushAll')->once()->andReturn(true);
-        $this->getReaderWithAnnotation("true");
+        $this->getReaderWithAnnotation('true');
         $this->checkInterceptor();
     }
-
 }

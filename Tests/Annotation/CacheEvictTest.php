@@ -16,7 +16,6 @@ class CacheEvictTest extends \PHPUnit_Framework_TestCase
         );
         $this->assertInstanceOf(CacheEvict::class, $cacheable);
         $this->assertEquals('true', $cacheable->allEntries);
-
     }
 
     public function testCreateCacheEvictAnnotationWithAllEntry()
@@ -26,6 +25,5 @@ class CacheEvictTest extends \PHPUnit_Framework_TestCase
         );
         $this->assertInstanceOf(CacheEvict::class, $cacheable);
         $this->assertEquals('false', $cacheable->allEntries);
-
     }
 }

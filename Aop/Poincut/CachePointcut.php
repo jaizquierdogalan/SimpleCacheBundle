@@ -6,7 +6,6 @@ use Doctrine\Common\Annotations\Reader;
 use Easys\SimpleCacheBundle\Annotation\Cache;
 use JMS\AopBundle\Aop\PointcutInterface;
 
-
 class CachePointcut implements PointcutInterface
 {
     private $reader;

@@ -8,6 +8,4 @@ namespace Easys\SimpleCacheBundle\Annotation;
  */
 class Cacheable extends Cache
 {
-
-
 }

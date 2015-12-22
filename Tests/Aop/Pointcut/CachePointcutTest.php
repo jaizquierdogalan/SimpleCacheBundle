@@ -7,7 +7,6 @@ use Easys\SimpleCacheBundle\Annotation\Cacheable;
 use Easys\SimpleCacheBundle\Aop\Poincut\CachePointcut;
 use Mockery as m;
 
-
 class CachePointcutTest extends \PHPUnit_Framework_TestCase
 {
     public function testCacheablePointcut()
@@ -21,7 +20,7 @@ class CachePointcutTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Configure Reader with annotation
+     * Configure Reader with annotation.
      */
     protected function getReaderWithAnnotation()
     {

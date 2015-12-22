@@ -53,6 +53,7 @@ class CacheInterceptor implements MethodInterceptorInterface
 
     /**
      * @param MethodInvocation $invocation
+     *
      * @return array
      */
     protected function getAnnotations(MethodInvocation $invocation)
@@ -68,6 +69,7 @@ class CacheInterceptor implements MethodInterceptorInterface
     /**
      * @param MethodInvocation $invocation
      * @param $annotation
+     *
      * @return mixed
      */
     protected function cacheable(MethodInvocation $invocation, Cache $annotation)
@@ -87,7 +89,7 @@ class CacheInterceptor implements MethodInterceptorInterface
     {
         $this->cache = $this->container->get($annotation->doctrineCacheProvider);
 
-        if ("true" === $annotation->allEntries) {
+        if ('true' === $annotation->allEntries) {
             $this->cache->flushAll();
         } else {
             $this->cache->delete(
@@ -95,7 +97,5 @@ class CacheInterceptor implements MethodInterceptorInterface
                     ->generateKey($invocation, $annotation)
             );
         }
-
     }
-
 }

@@ -19,5 +19,4 @@ class CacheEvict extends Cache
         }
         parent::__construct($values);
     }
-
 }
