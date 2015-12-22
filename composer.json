@@ -17,7 +17,8 @@
     "php": ">=5.6",
     "jms/aop-bundle": "^1.0",
     "symfony/framework-bundle": ">=2.2.0,<3.0",
-    "mockery/mockery": "dev-master@dev"
+    "mockery/mockery": "dev-master@dev",
+    "symfony/expression-language": "^2.4||^3.0"
   },
   "require-dev": {},
   "suggest": {},
