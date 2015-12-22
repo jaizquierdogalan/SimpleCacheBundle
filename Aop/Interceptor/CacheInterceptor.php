@@ -9,7 +9,6 @@ use Doctrine\Common\Cache\CacheProvider;
 use Easys\SimpleCacheBundle\Annotation\Cache;
 use Easys\SimpleCacheBundle\Annotation\Cacheable;
 use Easys\SimpleCacheBundle\Annotation\CacheEvict;
-use Easys\SimpleCacheBundle\Annotation\CacheUpdate;
 use Easys\SimpleCacheBundle\Exception\CacheException;
 use Symfony\Component\DependencyInjection\Container;
 
