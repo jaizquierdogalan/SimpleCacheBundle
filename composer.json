@@ -1,7 +1,7 @@
 {
   "name": "izquierdogalan/simplecache-bundle",
   "type": "symfony-bundle",
-  "description": "Show benchmark functions, apis, controlers, etc",
+  "description": "Cache functions with annotations.",
   "keywords": [
     "cache"
   ],
