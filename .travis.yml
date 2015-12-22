@@ -11,6 +11,9 @@ before_script:
   - php composer.phar install
   - phpunit
 
+after_script:
+    - php ./vendor/bin/coveralls -v
+
 notifications:
   email:
     - ja.izquierdo.galan@gmail.com
