@@ -12,4 +12,4 @@ services:
         arguments: [@annotation_reader]
 
     easys_simple_cache.cache_key_generator:
-        class: Easys\SimpleCacheBundle\Cache\KeyGenerator\KeyGenerator
+        class: Easys\SimpleCacheBundle\Services\KeyGenerator
