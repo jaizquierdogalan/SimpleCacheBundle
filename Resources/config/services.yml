@@ -1,0 +1,15 @@
+services:
+    easys.cache.interceptor:
+        class: Easys\SimpleCacheBundle\Aop\Interceptor\CacheInterceptor
+        arguments:
+            - @annotation_reader
+            - @service_container
+
+    easys.cache.pointcut:
+        class: Easys\SimpleCacheBundle\Aop\Poincut\CachePointcut
+        tags:
+            - { name: jms_aop.pointcut, interceptor: easys.cache.interceptor }
+        arguments: [@annotation_reader]
+
+    easys_simple_cache.cache_key_generator:
+    	class: Easys\SimpleCacheBundle\Cache\KeyGenerator\KeyGenerator
