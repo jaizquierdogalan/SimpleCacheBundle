@@ -45,6 +45,8 @@ class KeyGenerator
         foreach ($invocation->reflection->getParameters() as $param) {
             if (method_exists($param, 'getNamedArgument')) {
                 $values[$param->name] = $invocation->getNamedArgument($param->name);
+            }elseif($invocation->getNamedArgument($param->name)){
+                $values[$param->name] = $invocation->getNamedArgument($param->name);
             }
         }
 
